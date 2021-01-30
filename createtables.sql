@@ -1,0 +1,65 @@
+CREATE TABLE Users
+(
+  Name VARCHAR NOT NULL,
+  Username VARCHAR NOT NULL,
+  Password VARCHAR NOT NULL,
+  Role INT NOT NULL,
+  PRIMARY KEY (Username)
+);
+
+CREATE TABLE Pantry
+(
+  ID SERIAL,
+  Name VARCHAR NOT NULL,
+  Username VARCHAR NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (Username) REFERENCES Users(Username)
+);
+
+CREATE TABLE Grains_Other
+(
+  Name VARCHAR NOT NULL,
+  Type VARCHAR NOT NULL,
+  Date DATE NOT NULL,
+  Weight FLOAT,
+  ID SERIAL,
+  PantryID INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (PantryID) REFERENCES Pantry(ID)
+);
+
+CREATE TABLE Fridge
+(
+  ID SERIAl,
+  Name VARCHAR NOT NULL,
+  Username VARCHAR NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (Username) REFERENCES Users(Username)
+);
+
+CREATE TABLE Meats
+(
+  Name VARCHAR NOT NULL,
+  Type VARCHAR NOT NULL,
+  Date DATE NOT NULL,
+  Weight FLOAT,
+  ID SERIAL,
+  FridgeID INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (FridgeID) REFERENCES Fridge(ID)
+);
+
+CREATE TABLE Fruits_Vegetables
+(
+  Name VARCHAR NOT NULL,
+  Type VARCHAR NOT NULL,
+  Weight FLOAT,
+  Date DATE NOT NULL,
+  ID SERIAL,
+  FridgeID INT,
+  PantryID INT,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (FridgeID) REFERENCES Fridge(ID),
+  FOREIGN KEY (PantryID) REFERENCES Pantry(ID),
+  UNIQUE (FridgeID)
+);
