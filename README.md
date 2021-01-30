@@ -1,5 +1,7 @@
 # 350project
 
+### Contributors (Team): Esdras Catala
+
 Complexity:
 Number of tables: Users, Pantry, Fridge, Meats, Fruits_Vegetables, Grains_Others (6)
 
