@@ -1,8 +1,7 @@
 -- Insert 3 users
-INSERT INTO users VALUES ('Esdras Catala', 'esdras', 'esdras', 0);
-INSERT INTO users VALUES ('Grant Palacio', 'grant', 'grant', 0);
-INSERT INTO users VALUES ('Oyuki Mendoza', 'oyuki', 'oyuki', 0);
-INSERT INTO users VALUES ('Test User', 'test', 'test', 1);
+-- Insert users will have the name for the 3 group members 
+-- Example: ('Esdras Catala', 'esdras', aPassword, 0);
+-- Just to avoid giving away passwords do the insert for users manualy. This user information can be found in the shared drive for the team.
 
 -- Create fridge and pantry for users
 INSERT INTO fridge (id, name, username) VALUES (1, 'kitchen', 'esdras');
