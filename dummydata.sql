@@ -1,7 +1,6 @@
 -- Insert 3 users
--- Insert users will have the name for the 3 group members 
--- Example: ('Esdras Catala', 'esdras', aPassword, 0);
--- Just to avoid giving away passwords do the insert for users manualy. This user information can be found in the shared drive for the team.
+-- Insert users will have the name for the 3 group members
+-- Just to avoid giving away passwords do the insert for users manualy. Or check the share drive with the complete script
 
 -- Create fridge and pantry for users
 INSERT INTO fridge (id, name, username) VALUES (1, 'kitchen', 'esdras');
