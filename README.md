@@ -57,3 +57,5 @@ There are three SQL files.
 **dummydata.sql** is to create new users, a fridge and pantry for each user, and an item for each fridge and pantry. **WARNING:** this script will not work unless you clear all the data before running this script.
 
 **createtables.sql** is the initial script from the Schema Diagram. This script is to initialize the tables in a new database if needed.
+
+**createtviews.sql** this script is to create the views for the database. The views a a way to visualize data and make it easier to run queries based on the views. Ex. We do not need to run a query to get the fridge and pantry of every user because that information is already part of the view user_kitchen_list.
