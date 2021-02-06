@@ -6,6 +6,7 @@ Complexity:
 Number of tables: Users, Pantry, Fridge, Meats, Fruits_Vegetables, Grains_Others (6)
 
 Users: <br/>
+  Role: int<br/>
   Name: String<br/>
   Username: String<br/>
   Password: Stringv
