@@ -1,0 +1,633 @@
+{
+	"info": {
+		"_postman_id": "0fa338b8-badd-41a6-96cf-196d70628867",
+		"name": "KitchenApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Not A User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/users?username=eq.notauser",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "eq.notauser"
+						}
+					]
+				},
+				"description": "Not a valid user response"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/users?username=eq.esdras",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "eq.esdras"
+						}
+					]
+				},
+				"description": "A valid user response"
+			},
+			"response": []
+		},
+		{
+			"name": "Get fridge by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/pantry?id=eq.1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"pantry"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.1"
+						}
+					]
+				},
+				"description": "Valid fridge id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get pantry by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/pantry?id=eq.1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"pantry"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.1"
+						}
+					]
+				},
+				"description": "Valid pantry id\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Get F&V by fridge id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/fruits_vegetables?fridgeid=eq.1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"fruits_vegetables"
+					],
+					"query": [
+						{
+							"key": "fridgeid",
+							"value": "eq.1"
+						}
+					]
+				},
+				"description": "Returns all fruits and vegetables in a users fridge"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Meats by fridge id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/meats?fridgeid=eq.1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"meats"
+					],
+					"query": [
+						{
+							"key": "fridgeid",
+							"value": "eq.1"
+						}
+					]
+				},
+				"description": "Returns all meats in a users fridge"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Grains by pantry id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/grains_other?pantryid=eq.1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"grains_other"
+					],
+					"query": [
+						{
+							"key": "pantryid",
+							"value": "eq.1"
+						}
+					]
+				},
+				"description": "Returns all grains and others in a users pantry"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user fridge and pantry by username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/user_kitchen_list?username=eq.esdras",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"user_kitchen_list"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "eq.esdras"
+						}
+					]
+				},
+				"description": "Returns the fridge and pantry id for a specified user"
+			},
+			"response": []
+		},
+		{
+			"name": "Add user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New User2\",\n    \"username\": \"username2\",\n    \"password\": \"password\",\n    \"role\": 1\n}\n"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/users",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Insert a new user into the database. By passing a json object as part of the body\n\nExample json body\n\n{\n    \"name\": \"New User\",\n    \"username\": \"username\",\n    \"password\": \"password\",\n    \"role\": 1\n}\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Add F&V",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"carrots\",\n    \"type\": \"vegetable\",\n    \"weight\": 2,\n    \"date\": \"2021-02-13\",\n    \"fridgeid\": 1,\n    \"pantryid\": null\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/fruits_vegetables",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"fruits_vegetables"
+					]
+				},
+				"description": "Insert a fruit or vegetable into the table with a fridge1 linking to the user's fridge.\n\nA valid fridge id is 1"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Meat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"drumsticks\",\n    \"type\": \"chicken\",\n    \"weight\": 3,\n    \"date\": \"2021-02-13\",\n    \"fridgeid\": 1\n}\n"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/meats",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"meats"
+					]
+				},
+				"description": "Insert a meat into the meats table linked to a fridge id based on the user's fridge id"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Grains & Other",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"rice\",\n    \"type\": \"wild\",\n    \"weight\": 1,\n    \"date\": \"2021-02-13\",\n    \"pantryid\": 1\n}\n"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/grains_other",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"grains_other"
+					]
+				},
+				"description": "Add item to the grains and others table which is linked to a user by the user's pantryid"
+			},
+			"response": []
+		}
+	]
+}
