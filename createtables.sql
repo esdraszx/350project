@@ -61,5 +61,4 @@ CREATE TABLE Fruits_Vegetables
   PRIMARY KEY (ID),
   FOREIGN KEY (FridgeID) REFERENCES Fridge(ID),
   FOREIGN KEY (PantryID) REFERENCES Pantry(ID),
-  UNIQUE (FridgeID)
 );
