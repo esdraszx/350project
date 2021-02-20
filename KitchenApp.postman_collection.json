@@ -254,7 +254,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n    \"name\": \"tomatoes\",\n    \"type\": \"fruit\"\n}"
 				},
 				"url": {
 					"raw": "http://192.168.50.64:3000/fruits_vegetables?fridgeid=eq.1",
@@ -513,6 +513,11 @@
 						"name": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia2l0Y2hlbl9yb2xlIiwidXNlcm5hbWUiOiJlc2RyYXMiLCJleHAiOjE2MjY4MTI5MzJ9.6LCpELBcugk6C57S_wz5YriCSr1JF_yIuW_XC2azcJU",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -626,6 +631,475 @@
 					]
 				},
 				"description": "Add item to the grains and others table which is linked to a user by the user's pantryid"
+			},
+			"response": []
+		},
+		{
+			"name": "Signup EndPoint",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"testing1\",\n    \"password\": \"test\",\n    \"name\": \"Some name\",\n    \"role\": 1\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/rpc/signup",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"rpc",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"testing1\",\n    \"upassword\": \"test\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/rpc/login",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"rpc",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"esdras\",\n    \"upassword\": \"esdras\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/rpc/login_admin",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"rpc",
+						"login_admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit F&V",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"tomatoes\",\n    \"type\": \"fruit\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/fruits_vegetables?id=eq.8",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"fruits_vegetables"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Grains & Other",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5zIiwidXNlcm5hbWUiOiJlc2RyYXMiLCJleHAiOjE2MjY4MTI5MzJ9.Jn2BGALFTCNwHexDdgGgeOfXQQuWSm_Bkxt4ZirK7fI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"white\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/grains_other?id=eq.5",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"grains_other"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Meats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5zIiwidXNlcm5hbWUiOiJlc2RyYXMiLCJleHAiOjE2MjY4MTI5MzJ9.Jn2BGALFTCNwHexDdgGgeOfXQQuWSm_Bkxt4ZirK7fI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"turkey\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/meats?id=eq.6",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"meats"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Meats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia2l0Y2hlbl9yb2xlIiwidXNlcm5hbWUiOiJlc2RyYXMiLCJleHAiOjE2MjY4MTI5MzJ9.6LCpELBcugk6C57S_wz5YriCSr1JF_yIuW_XC2azcJU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"turkey\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/meats?id=eq.6",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"meats"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete F&V",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia2l0Y2hlbl9yb2xlIiwidXNlcm5hbWUiOiJlc2RyYXMiLCJleHAiOjE2MjY4MTI5MzJ9.6LCpELBcugk6C57S_wz5YriCSr1JF_yIuW_XC2azcJU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"turkey\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/fruits_vegetables?id=eq.9",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"fruits_vegetables"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Grains & Other",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia2l0Y2hlbl9yb2xlIiwidXNlcm5hbWUiOiJlc2RyYXMiLCJleHAiOjE2MjY4MTI5MzJ9.6LCpELBcugk6C57S_wz5YriCSr1JF_yIuW_XC2azcJU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"turkey\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/grains_other?id=eq.5",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"grains_other"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.5"
+						}
+					]
+				}
 			},
 			"response": []
 		}
