@@ -123,7 +123,13 @@
 					"script": {
 						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
 						"exec": [
-							""
+							"pm.test(\"Fridge By id\", function () { ",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json();",
+							"    pm.expect(res.length).to.gt(0)",
+							"    pm.expect(res[0]).to.be.a('Object')",
+							"    pm.expect(res[0].id).to.eql(1)",
+							"}); "
 						],
 						"type": "text/javascript"
 					}
@@ -178,7 +184,13 @@
 					"script": {
 						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
 						"exec": [
-							""
+							"pm.test(\"Pantry by id\", function () { ",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json();",
+							"    pm.expect(res.length).to.gt(0)",
+							"    pm.expect(res[0]).to.be.a('Object')",
+							"    pm.expect(res[0].id).to.eql(1)",
+							"}); "
 						],
 						"type": "text/javascript"
 					}
@@ -233,7 +245,12 @@
 					"script": {
 						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
 						"exec": [
-							""
+							"pm.test(\"F&V by fridge id\", function () { ",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json();",
+							"    pm.expect(res.length).to.gt(0)",
+							"    pm.expect(res[0]).to.be.a('Object')",
+							"}); "
 						],
 						"type": "text/javascript"
 					}
@@ -288,7 +305,12 @@
 					"script": {
 						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
 						"exec": [
-							""
+							"pm.test(\"Meats by fridge id\", function () { ",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json();",
+							"    pm.expect(res.length).to.gt(0)",
+							"    pm.expect(res[0]).to.be.a('Object')",
+							"}); "
 						],
 						"type": "text/javascript"
 					}
@@ -343,7 +365,12 @@
 					"script": {
 						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
 						"exec": [
-							""
+							"pm.test(\"G&O by pantry id\", function () { ",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json();",
+							"    pm.expect(res.length).to.gt(0)",
+							"    pm.expect(res[0]).to.be.a('Object')",
+							"}); "
 						],
 						"type": "text/javascript"
 					}
@@ -398,6 +425,12 @@
 					"script": {
 						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
 						"exec": [
+							"",
+							"pm.test(\"Status test\", function () { ",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json();",
+							"    pm.expect(res).to.be.a('Array')",
+							"}); ",
 							""
 						],
 						"type": "text/javascript"
@@ -642,7 +675,11 @@
 					"script": {
 						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
 						"exec": [
-							""
+							"pm.test(\"Signup test\", function () { ",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json();",
+							"    pm.expect(res).to.eql(null)",
+							"});  "
 						],
 						"type": "text/javascript"
 					}
@@ -660,7 +697,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"testing1\",\n    \"password\": \"test\",\n    \"name\": \"Some name\",\n    \"role\": 1\n}"
+					"raw": "{\n    \"username\": \"Newuser2\",\n    \"password\": \"test\",\n    \"name\": \"Some name\",\n    \"role\": 1\n}"
 				},
 				"url": {
 					"raw": "http://192.168.50.64:3000/rpc/signup",
@@ -688,6 +725,13 @@
 					"script": {
 						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
 						"exec": [
+							"pm.test(\"Login test\", function () { ",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json();",
+							"    pm.expect(res.length).to.eql(1)",
+							"    pm.expect(res[0]).to.be.a('Object')",
+							"    pm.expect(res[0].token).to.be.a('String')",
+							"}); ",
 							""
 						],
 						"type": "text/javascript"
@@ -706,7 +750,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"testing1\",\n    \"upassword\": \"test\"\n}"
+					"raw": "{\n    \"username\": \"grant\",\n    \"upassword\": \"grant\"\n}"
 				},
 				"url": {
 					"raw": "http://192.168.50.64:3000/rpc/login",
@@ -734,6 +778,13 @@
 					"script": {
 						"id": "c5b6ae46-f1b5-4338-bc34-5a1d7469587c",
 						"exec": [
+							"pm.test(\"Login_admin test\", function () { ",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json();",
+							"    pm.expect(res.length).to.eql(1)",
+							"    pm.expect(res[0]).to.be.a('Object')",
+							"    pm.expect(res[0].token).to.be.a('String')",
+							"}); ",
 							""
 						],
 						"type": "text/javascript"

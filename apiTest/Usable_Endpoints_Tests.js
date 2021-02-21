@@ -84,6 +84,18 @@ pm.test("G&O by pantry id", function () {
 }); 
 
 
+//http://192.168.50.64:3000/user_kitchen_list?username=eq.esdras
+pm.test("Status test", function () { 
+    pm.response.to.have.status(200);
+    let res = pm.response.json();
+    pm.expect(res).to.be.a('Array')
+    pm.expect(res[0]).to.be.a('Object')
+    pm.expect(res[0].username).to.eql('esdras')
+}); 
+
+
+
+
 
 
 
