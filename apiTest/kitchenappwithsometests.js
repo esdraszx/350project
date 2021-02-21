@@ -74,15 +74,6 @@ pm.test("Meats by fridge id", function () {
     pm.expect(res[0]).to.be.a('Object')
 }); 
 
-//http://192.168.50.64:3000/meats?fridgeid=eq.1
-
-pm.test("Meats by fridge id", function () { 
-    pm.response.to.have.status(200);
-    let res = pm.response.json();
-    pm.expect(res.length).to.gt(0)
-    pm.expect(res[0]).to.be.a('Object')
-}); 
-
 //http://192.168.50.64:3000/grains_other?pantryid=eq.1
 
 pm.test("G&O by pantry id", function () { 
