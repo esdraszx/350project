@@ -29,9 +29,9 @@ CREATE TRIGGER new_user
 $$
 BEGIN
 	UPDATE fridge 
-	SET username = NULL WHERE username = OLD.username;
+	SET username = '' WHERE username = OLD.username;
 	UPDATE pantry 
-	SET username = NULL WHERE username = OLD.username;
+	SET username = '' WHERE username = OLD.username;
 
 	RETURN OLD;
 END;
