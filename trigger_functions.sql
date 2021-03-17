@@ -32,6 +32,8 @@ BEGIN
 	SET username = '' WHERE username = OLD.username;
 	UPDATE pantry 
 	SET username = '' WHERE username = OLD.username;
+	UPDATE recipes 
+	SET username = '' WHERE username = OLD.username;
 
 	RETURN OLD;
 END;
