@@ -30,7 +30,7 @@ $$
 CREATE OR REPLACE FUNCTION public.login_admin(IN username text,IN upassword text)
     RETURNS jwt_token
     LANGUAGE 'plpgsql'
-	SECURITY DEFINER
+    SECURITY DEFINER
 AS $$
 DECLARE
   _role NAME;
@@ -40,6 +40,10 @@ BEGIN
   SELECT users.username, users.role INTO _role, user_role FROM users WHERE users.username=login_admin.username AND password=login_admin.upassword;
   IF _role IS NULL THEN
     RAISE invalid_password USING message = 'invalid user or password';
+  END IF;
+  
+  IF user_role = 2 THEN
+  	RAISE invalid_password USING message = 'this user does not exists';
   END IF;
   
   IF user_role = 1 THEN
@@ -68,6 +72,5 @@ BEGIN
   	RETURN result;
   END IF;
 
-  
 END;
 $$;

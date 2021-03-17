@@ -19,3 +19,29 @@ CREATE TRIGGER new_user
   ON users
   FOR EACH ROW
   EXECUTE PROCEDURE generate_inventory();
+  
+  
+  
+  --THIS HELPS DELETE A USER
+  CREATE OR REPLACE FUNCTION delete_user()
+  RETURNS TRIGGER
+  AS
+$$
+BEGIN
+	UPDATE fridge 
+	SET username = '' WHERE username = OLD.username;
+	UPDATE pantry 
+	SET username = '' WHERE username = OLD.username;
+	UPDATE recipes 
+	SET username = '' WHERE username = OLD.username;
+
+	RETURN OLD;
+END;
+$$ LANGUAGE PLPGSQL;
+
+
+CREATE TRIGGER del_user
+  BEFORE DELETE
+  ON users
+  FOR EACH ROW
+  EXECUTE PROCEDURE delete_user();
