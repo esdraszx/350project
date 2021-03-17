@@ -7,6 +7,15 @@ CREATE TABLE Users
   PRIMARY KEY (Username)
 );
 
+CREATE TABLE recipes
+(
+  ID SERIAL,
+  Username VARCHAR NOT NULL,
+	Recipe VARCHAR NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (Username) REFERENCES Users(Username)
+);
+
 CREATE TABLE Pantry
 (
   ID SERIAL,
