@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0fa338b8-badd-41a6-96cf-196d70628867",
+		"_postman_id": "27ba0561-2fa7-49ae-903c-346861511172",
 		"name": "KitchenApp",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1148,6 +1148,120 @@
 						{
 							"key": "id",
 							"value": "eq.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recipes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5zIiwidXNlcm5hbWUiOiJlc2RyYXMiLCJleHAiOjE2MjkyMTY1Nzd9.mzVJVCO7vA_wqZ7BANVgKbYOAlb1MY_Oc_E7-MyftN0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/recipes?username=eq.esdras",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "eq.esdras"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Del Recipe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/recipes?id=eq.1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Recipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5zIiwidXNlcm5hbWUiOiJlc2RyYXMiLCJleHAiOjE2MjkyMTY1Nzd9.mzVJVCO7vA_wqZ7BANVgKbYOAlb1MY_Oc_E7-MyftN0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"username\": \"esdras\",\n    \"recipe\": \"{\\\"calories\\\":1052.5919682006725,\\\"ingredients\\\":10,\\\"yield\\\":4,\\\"image\\\":\\\"https://www.edamam.com/web-img/6e6/6e62fe1a14b6f133c66a812254e999fb.jpg\\\",\\\"link\\\":\\\"http://www.edamam.com/recipe/mushroom-parmesan-and-wheat-germ-turkey-burgers-a45a1617e06dae6828ae4f5724cf21c3/tomatoes%2Clettuce%2C\\\",\\\"label\\\":\\\"Mushroom, Parmesan, and Wheat Germ Turkey Burgers\\\"}\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.50.64:3000/recipes",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"50",
+						"64"
+					],
+					"port": "3000",
+					"path": [
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
 						}
 					]
 				}
